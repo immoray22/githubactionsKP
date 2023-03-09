@@ -29,3 +29,13 @@ jobs:
         run : |
           ls -al
       
+      # Run a set of commands using the runners shell
+      - name: Run a Multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your projec.
+      - name: check java version
+        run: java -version
+      - name: garadle build
+        run: gradle build
+      
