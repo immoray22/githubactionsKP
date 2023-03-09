@@ -34,7 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          sudo apt get update -y
+          sudo apt install update -y
       - name: check java version
         run: java -version
       - name: gradle build
