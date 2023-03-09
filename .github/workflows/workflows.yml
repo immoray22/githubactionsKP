@@ -36,6 +36,6 @@ jobs:
           echo test, and deploy your projec.
       - name: check java version
         run: java -version
-      - name: garadle build
+      - name: gradle build
         run: gradle build
       
