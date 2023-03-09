@@ -5,9 +5,8 @@ name: Continous Integration
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [ main, feature/branch ]
+
 
   # Allows you to tun this workflow manually from teh Actions tab
   workflow_dispatch:
@@ -25,4 +24,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line scrip
         run: echo What is happening, Imran1
+
+      - name: Run a custom script
+        run : |
+          ls -al
       
