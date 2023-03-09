@@ -36,8 +36,6 @@ jobs:
           echo test, and deploy your projec.
       - name: check java version
         run: java -version
-      - name: gradle build
-        run: gradle build --stacktrace
       - name: gradlew build
         run: ./gradlew build
       - name: Check docker version
