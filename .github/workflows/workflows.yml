@@ -37,7 +37,9 @@ jobs:
       - name: check java version
         run: java -version
       - name: Install Gradle
-        run: brew install Gradle
+        run: apt install Gradle
+      - name: gradle build
+        run: gradle build
       - name: gradlew build
         run: ./gradlew build
       - name: Check docker version
