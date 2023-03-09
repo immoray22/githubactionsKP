@@ -1,0 +1,28 @@
+# KP Project
+name: Continous Integration
+
+#Controls when the workflow will run (Trigger)
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to tun this workflow manually from teh Actions tab
+  workflow_dispatch:
+  
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubunut-latest
+    
+    # Steps respresent sequence of tasks that will be executed as part of job
+    steps:
+      # Checks-out your reqpo under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+      
+      # Runs a single command using the runners shell
+      - name: Run a one-line scrip
+        run: echo What is happening, Imran1
+      
