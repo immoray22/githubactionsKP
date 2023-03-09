@@ -34,6 +34,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your projec.
+      -name: Install Java 8
+        run: |
+          sudo apt get update -y
+          sudo apt-get install openjdk-8-jdk
       - name: check java version
         run: java -version
       - name: gradle build
