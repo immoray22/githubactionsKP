@@ -37,7 +37,7 @@ jobs:
       - name: check java version
         run: java -version
       - name: Install Gradle
-        run: apt install Gradle
+        run: sudo apt install Gradle
       - name: gradle build
         run: gradle build
       - name: gradlew build
