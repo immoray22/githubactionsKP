@@ -36,12 +36,6 @@ jobs:
           echo test, and deploy your projec.
       - name: check java version
         run: java -version
-      - name: Install Gradle
-        run: wget https://services.gradle.org/distributions/gradle-${VERSION}-bin.zip -P /tmp
-      - name: Unzip Gradle package
-        run : |
-          sudo apt install unzip
-          sudo unzip -d /opt/gradle /tmp/gradle-${VERSION}-bin.zip
       - name: gradle build
         run: gradle build
       - name: gradlew build
