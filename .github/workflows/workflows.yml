@@ -25,6 +25,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
+      - name: 
 
       # Runs a single command using the runners shell
       - name: Run a one-line scrip
@@ -34,10 +35,10 @@ jobs:
         run : |
           ls -al
 
-      - name: Login with Azure Action
+      - name: Log in with Azure Action
         uses: azure/login@v1.4.6
         with:
-          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
       
       # Run a set of commands using the runners shell
       - name: Run AZ command
