@@ -33,8 +33,7 @@ jobs:
       - name: Run a Multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.
-          sudo apt install update -y
+          echo test, and deploy your project
       - name: check java version
         run: java -version
       - name: gradle build
@@ -45,6 +44,7 @@ jobs:
         run : |
           docker -v
           docker
+          docker images -a
 
 
       
