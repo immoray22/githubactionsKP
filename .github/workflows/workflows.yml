@@ -35,6 +35,10 @@ jobs:
           ls -al
       
       # Run a set of commands using the runners shell
+      - name: Run AZ command
+        run: |
+          az account show
+          az group list
       - name: Run a Multi-line script
         run: |
           echo Add other actions to build,
@@ -57,9 +61,6 @@ jobs:
       
       - name: push docker image
         run: docker push immoray22/demo-kotlin2.0
-      - name: Run AZ command
-        run: |
-          az account show
-          az group list
+      
 
       
