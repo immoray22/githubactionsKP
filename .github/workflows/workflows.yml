@@ -50,12 +50,12 @@ jobs:
           docker images -a
       - name: dockcer build
         run: | 
-          docker build . -t demo-kotlin2.0
+          docker build . -t immoray22/demo-kotlin2.0
           docker images -a
       - name: login to docker hub
         run: docker login -u ${{ secrets.dockerhubusername }} -p ${{ secrets.dockerhubpassword }}
       
       - name: push docker image
-        run: docker push demo-kotlin2.0
+        run: docker push immoray22/demo-kotlin2.0
 
       
