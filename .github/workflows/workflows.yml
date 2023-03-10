@@ -19,8 +19,14 @@ jobs:
     # Steps respresent sequence of tasks that will be executed as part of job
     steps:
       # Checks-out your reqpo under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - name: Checkout main branch
+        uses: actions/checkout@v3
       
+      - name: Setup JDK 8.0.2
+        uses: actions/setup-java@v8
+        with:
+          java-version: 8.0.2
+          
       # Runs a single command using the runners shell
       - name: Run a one-line scrip
         run: echo What is happening, Imran1
