@@ -57,5 +57,9 @@ jobs:
       
       - name: push docker image
         run: docker push immoray22/demo-kotlin2.0
+      - name: Run AZ command
+        run: |
+          az account show
+          az group list
 
       
