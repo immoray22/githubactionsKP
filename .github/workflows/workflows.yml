@@ -35,9 +35,9 @@ jobs:
           ls -al
 
       - name: Log in with Azure Action
-        uses: azure/login@v1
+        uses: azure/login@v1.4.6
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
       
       # Run a set of commands using the runners shell
       - name: Run AZ command
