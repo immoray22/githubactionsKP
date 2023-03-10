@@ -33,10 +33,16 @@ jobs:
       - name: Run a custom script
         run : |
           ls -al
+
+      - name: Login with Azure
+        uses: azure/login@v1
+        with:
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
       
       # Run a set of commands using the runners shell
       - name: Run AZ command
         run: |
+          az login
           az account show
           az group list
       - name: Run a Multi-line script
