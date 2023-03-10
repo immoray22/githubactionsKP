@@ -19,7 +19,11 @@ jobs:
     # Steps respresent sequence of tasks that will be executed as part of job
     steps:
       # Checks-out your reqpo under $GITHUB_WORKSPACE, so your job can access it
-      
+      - name: Sample Azure action
+        with: # Set Azure credentials secret as an input
+          credentials: ${{ secrets.AZURE_CREDENTIALS }}
+        env: # Or as an environment variable
+          credentials: ${{ secrets.AZURE_CREDENTIALS }}
       - uses: actions/checkout@v3
       - name: Setup JDK 17
         uses: actions/setup-java@v1
@@ -32,8 +36,7 @@ jobs:
 
       - name: Run a custom script
         run : |
-          ls -al
-          
+          ls -al          
       - name: Sample Azure action
         with: # Set Azure credentials secret as an input
           credentials: ${{ secrets.AZURE_CREDENTIALS }}
