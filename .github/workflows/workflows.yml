@@ -34,19 +34,26 @@ jobs:
         run : |
           ls -al
 
-      - name: Azure CLI Action
-        uses: Azure/cli@v1.0.7
-
       - name: Log in with Azure Action
         uses: azure/login@v1
         with:
-          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Azure CLI script
+        uses: azure/CLI@v1
+        with:
+          azcliversion: 2.30.0
+          inlineScript: |
+            az account show
+            az storage -h
       
       # Run a set of commands using the runners shell
       - name: Run AZ command
         run: |
           az account show
           az group list
+     
+     
       - name: Run a Multi-line script
         if: always()
         run: |
