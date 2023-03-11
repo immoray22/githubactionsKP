@@ -34,8 +34,11 @@ jobs:
         run : |
           ls -al
 
+      - name: Azure CLI Action
+        uses: Azure/cli@v1.0.7
+
       - name: Log in with Azure Action
-        uses: azure/login@v1.0.7
+        uses: azure/login@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       
