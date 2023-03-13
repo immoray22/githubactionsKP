@@ -37,19 +37,12 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          creds: '${{ secrets.AZURE_SP_CLIENT_SECRET }}'
-          client_id: '${{ secrets.AZURE_SP_CLIENT_ID }}'
-          tenant_id: '${{ secrets.AZURE_SP_TENANT_ID }}'
-          
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
 
-
-      - name: Azure CLI script
-        uses: azure/CLI@v1
-        with:
-          azcliversion: 2.30.0
-          inlineScript: |
+      - name: RUN AZ COMMAND
+        run: |
             az account show
-            az storage -h
+            az group list
       - name: Run a Multi-line script
         if: always()
         run: |
