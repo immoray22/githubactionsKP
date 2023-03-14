@@ -27,7 +27,7 @@ jobs:
           java-version: 17
 
       # Runs a single command using the runners shell
-      - name: Run a one-line scrip
+      - name: Run a one-line script
         run: echo What is happening, Imran1
 
       - name: Run a custom script
