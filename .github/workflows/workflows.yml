@@ -45,7 +45,7 @@ jobs:
           resource-group: testenv
 
       - run: |
-        kubectl create namespace githubrg
+          kubectl create namespace githubrg
 
 
       
