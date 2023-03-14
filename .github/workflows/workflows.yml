@@ -42,10 +42,9 @@ jobs:
       
       - name: RUN AZ COMMAND
         uses: azure/CLI@v1
-        with:
-          inlineScript: |
-            az account show
-            az group
+        run: |
+          az account show
+          az group
       - name: Run a Multi-line script
         if: always()
         run: |
