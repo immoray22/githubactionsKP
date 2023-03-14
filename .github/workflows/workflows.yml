@@ -47,10 +47,13 @@ jobs:
       - run: |
           kubectl create namespace githubrg
 
+      - run: |
+          kubectl apply -f pod.yaml
+
+
 
       
       - name: RUN AZ COMMAND
-        if: always()
         run: |
           az account show
           az group list
