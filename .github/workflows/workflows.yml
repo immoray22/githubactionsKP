@@ -44,7 +44,7 @@ jobs:
           cluster-name: githubactionaks
           resource-group: testenv
 
-      -run: |
+      - run: |
         kubectl create namespace githubrg
 
 
