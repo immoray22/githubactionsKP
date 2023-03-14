@@ -9,14 +9,14 @@ jobs:
     name: 'Terraform'
     runs-on: ubuntu-latest
   
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: 'Install pre-reqs'
-      run: |
-       curl -SL "https://releases.hashicorp.com/terraform/1.4.0/terraform_1.4.0_linux_amd64.zip" --output terraform.zip
-       unzip "terraform.zip"
-        mv terraform /usr/local/bin
-        terraform --version
-        rm terraform.zip   
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: 'Install pre-reqs'
+        run: |
+          curl -SL "https://releases.hashicorp.com/terraform/1.4.0/terraform_1.4.0_linux_amd64.zip" --output terraform.zip
+          unzip "terraform.zip"
+          mv terraform /usr/local/bin
+          terraform --version
+          rm terraform.zip   
    
