@@ -41,7 +41,6 @@ jobs:
 
       
       - name: RUN AZ COMMAND
-        uses: azure/CLI@v1
         run: |
           az account show
           az group
