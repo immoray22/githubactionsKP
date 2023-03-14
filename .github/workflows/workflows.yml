@@ -44,7 +44,7 @@ jobs:
         if: always()
         run: |
           az account show
-          az group
+          az group list
       - name: Run a Multi-line script
         if: always()
         run: |
