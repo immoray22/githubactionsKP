@@ -21,7 +21,7 @@ jobs:
           rm terraform.zip   
       - name: 'Install TFLint'
         run: |
-          wget: https://github.com/terraform-linters/tflint/releases/download/terraform_1.4.0_linux_amd64.zip
+          wget https://github.com/terraform-linters/tflint/releases/download/terraform_1.4.0_linux_amd64.zip
           unzip tflint_linux_amd64
           mv tflint /usr/local/bin
    
