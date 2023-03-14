@@ -41,6 +41,7 @@ jobs:
 
       
       - name: RUN AZ COMMAND
+        if: always()
         run: |
           az account show
           az group
