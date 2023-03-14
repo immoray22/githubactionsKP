@@ -50,8 +50,6 @@ jobs:
       - run: |
           kubectl apply -f pod.yaml
 
-
-
       
       - name: RUN AZ COMMAND
         run: |
