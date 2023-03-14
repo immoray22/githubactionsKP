@@ -38,11 +38,11 @@ jobs:
         uses: azure/login@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
-      - uses: azure/aks-set-context@v1
+      - uses: Azure/aks-set-context@v1
         with:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
           cluster-name: githubactionaks
-          resource-group: GithugRGACTION
+          resource-group: testenv
 
 
       
