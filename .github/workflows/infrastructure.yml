@@ -7,7 +7,7 @@ on:
 
 jobs:
   terraform:
-    runs-on:
+    runs-on: ubuntu-latest
     name: 'Terraform'
 
 #defaults:
@@ -15,20 +15,20 @@ jobs:
   #  shell: bash
    # working-directory: terraform
 
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: 'Install pre-reqs'
-      run: |
+    -   name: 'Install pre-reqs'
+        run: |
         curl -SL "https://releases.hashicorp.com/terraform/1.4.0/terraform_1.4.0_linux_amd64.zip" --output terraform.zip
         unzip "terraform.zip"
         mv terraform /usr/local/bin
         terraform --version
         rm terraform.zip
 
-    - name: 'Install TFLint'
-      run: |
+    -   name: 'Install TFLint'
+        run: |
         wget https://github.com/terraform-linters/tflint/releases/tflint_linux_amd64.zip
         unzip tflint_linux_amd64.zip
         mv tflint /usr/local/bin
