@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
   
   steps:
+  - name: Terraform Init
   - uses: hashicorp/setup-terraform@v2
     with:
       terraform_wrapper: false
