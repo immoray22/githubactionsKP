@@ -7,8 +7,9 @@ on:
 
 jobs:
   terraform:
+    name: 'Terraform Init'
     runs-on: ubuntu-latest
-    name: 'Terraform'
+    
     
 #defaults:
  # run:
