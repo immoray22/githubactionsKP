@@ -16,7 +16,7 @@ jobs:
    # working-directory: terraform
 
   steps:
-    - name: checkout
+    - name: Checkout
       uses: actions/checkout@v2
 
     - name: 'Install pre-reqs'
