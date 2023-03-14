@@ -2,8 +2,8 @@ name: 'Terraform'
 
 on: 
   push:
-    branches:
-      - main
+    branches: [ main ]
+     
 
 jobs:
   terraform:
@@ -17,8 +17,9 @@ jobs:
    # working-directory: terraform
 
   steps:
-    - name: Checkout
+    - name: checkout
       uses: actions/checkout@v2
+
     - name: 'Install pre-reqs'
         run: |
         curl -SL "https://releases.hashicorp.com/terraform/1.4.0/terraform_1.4.0_linux_amd64.zip" --output terraform.zip
